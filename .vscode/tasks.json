@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "g++ src/*.cpp -Iinclude -Iinclude/SDL2 -Iinclude/headers -Llib -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image -o main",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": "./main.exe",
+      "dependsOn": ["build"]
+    }
+  ]
+}
+
+/*    g++ main.cpp -Iinclude -Llib -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image -o main*/
